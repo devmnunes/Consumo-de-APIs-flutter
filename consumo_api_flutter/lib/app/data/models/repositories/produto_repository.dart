@@ -30,6 +30,7 @@ class ProdutoRepository implements IProdutoRepository {
       }).toList();
 
       return produtos;
+      
     } else if (response.statusCode == 404) {
       throw NotFountException(message: 'A url informada não é válida');
     } else {
